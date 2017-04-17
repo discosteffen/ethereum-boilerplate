@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boilerplate</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  <!--script src=""></script-->
+
+</head>
+<body>
+
+
+  <div class="top">
+
+    <div class="toplefttitle">Account information!</div>
+
+    <div class="topleft">
+      Account Number: <br/><span id="accounNr">Check if running</span><br/><br/>
+      Balance: <br/><span id="ethBalance"></span><br/>
+    </div>
+    <div class="topright">Additional info goes here...</div>
+
+    </div>
+
+
+<div class="left">
+  <div class="dropdown">
+    <button onclick="App.myFunction()" class="dropbtn">Select Account</button>
+    <div id="myDropdown" class="dropdown-content" style="display: none">
+    </div>
+  </div>
+
+  <button class="leftBtn" onclick="App.showBtn('showAccounts'); App.accountList();">Account List</button>
+
+  <button class="leftBtn" onclick="App.showBtn('unlockAccount')">Unlock account</button>
+
+  <button class="leftBtn" onclick="App.showBtn('spaceCoin')">Coin test</button>
+
+  <button class="leftBtn">Getter / Setter test</button>
+
+  <button class="leftBtn">Smart ID</button>
+
+  <button class="leftBtn" onclick="App.showBtn('otherStuff')">Other</button>
+
+<!--"return toggleMe('para0')" -->
+
+<!-- clean out accountinfo div later -->
+  <div class="accountinfo">
+<br/><br/><br/><br/>
+
+      Menu items to play with: <br/><br/>
+
+      Contract Info: <br/><br/>
+      Create new account?<br/>
+      Unlock account?<br/>
+      Select account and indicate which account is selected on account list page... <br/>
+      <br/>
+<br>
+
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div id="spaceCoin" style="display: none">
+    <h1 id="glowing">SpaceCoin</h1>
+    <h2></h2>
+    <br/>
+    <h3>You have <span class="black"><span id="balance"></span> SpaceCoin</span> </h3>
+
+    <br>
+    <h2>Send SpaceCoin</h2>
+    <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+    <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><br><button id="send" onclick="App.sendCoin()">Send SpaceCoin</button>
+    <br><br>
+    <br>
+      <br>
+    <span id="status"></span>
+    <br>
+    <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+    <br>
+  </div>
+
+
+<div id="otherStuff" style="display: none">
+  <button id="sng" onclick="App.test()">Click me to test Stuff</button>
+
+<label for="updateContent">Amount:</label><input type="text" id="updateContent" placeholder="e.g., a string"></input>
+  <button id="sng2" onclick="App.test2()">updatecontent</button>
+<br><br>
+  <button id="sng2" onclick="App.updateContent(2)">testcontent</button>
+<a href="#" onclick="App.updateContent(7)">test account 7</a>
+
+  <span id="testcontent"></span>
+
+  <br/>
+</div>
+
+  <div id="showAccounts">
+    <br/>
+    <span id="listAccounts"></span>
+  </div>
+
+  <div id="unlockAccount" style="display: none">
+
+  <label for="unlockAcc">Enter password:</label><input type="text" id="passwd" placeholder="password for current acount"></input>
+    <button id="unlockBtn" onclick="App.unlock()">updatecontent</button>
+
+    <span id="unlockStatus"></span>
+
+    <br/>
+  </div>
+
+
+</div>
+
+
+</body>
+</html>
